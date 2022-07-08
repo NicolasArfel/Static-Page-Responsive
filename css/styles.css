@@ -1,0 +1,264 @@
+/* --- app colors --- */ 
+
+:root {
+    --text-light-color: white;
+    --link : #007bff;
+    --link-hover : #0056b3;
+    --header-background : #f9f9f9;
+    --articles-border : #eaeaea;
+    --work-tag : #0766F0;
+    --team-tag : #DC5E53;
+    --news-tag : #98DC62;
+}
+
+/* --- global css --- */
+
+body {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-container {
+    display: flex;
+    height: 100vh;
+}
+
+.container-left, .container-right {
+    width: 50vw;
+}
+
+/* --- left-side --- */
+
+.container-left {
+    background-image: url(./../images/nicole.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.5rem;
+    text-shadow: 2px 2px 3px #000000;
+}
+
+.logo {
+    display: flex;
+    align-items: flex-start;
+}
+
+.logo__image {
+    width: 2.5rem;
+}
+
+.logo__tagline {
+    color: var(--text-light-color);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+    max-width: 3rem;
+    margin-left: 1rem;
+}
+
+.latest-news {
+    color: var(--text-light-color);
+    font-size: 1rem;
+    padding: 2rem 1.5rem;
+    text-align: right;
+    /* --- we apply opacity --- */
+    background-color: rgba(128, 128, 128, 0.4);
+}
+
+.latest-news__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.latest-news__tagline {
+    font-size: 0.8rem;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.latest-news__summary {
+    line-height: 1.5rem;
+}
+
+.menu__links-list {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu__links-item {
+    margin: 0 1rem;
+}
+
+.menu__link {
+    color: var(--text-light-color);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* --- right-side --- */
+
+.container-right {
+    overflow-y: auto;
+}
+
+.main-title {    
+    padding: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: var(--header-background);
+}
+
+.container-articles {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.article {
+    font-size: 1rem;
+    width: 50%;
+    border: 1px solid var(--articles-border);
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+.article__category {
+    color: var(--text-light-color);
+    display: inline-block;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.article__category--work {
+    background-color: var(--work-tag);
+}
+
+.article__category--team {
+    background-color: var(--team-tag);
+}
+
+.article__category--news {
+    background-color: var(--news-tag);
+}
+
+.article__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1.5rem 0;
+}
+
+.article__meta {
+    display: flex;
+    align-items: center;
+}
+
+.article__author-picture {
+    width: 1.5rem;
+}
+
+.article__author-name, .article__date {
+    font-size: 0.8rem;
+    color: darkgray;
+}
+
+.article__author-name {
+    color: black;
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+.article__content {
+    margin: 1rem 0;
+    line-height: 1.5rem;
+}
+
+.article__continue {
+    color: var(--link);
+    font-weight: bold;
+    text-decoration: underline;    
+}
+
+.article__continue:hover {
+    color: var(--link-hover);
+}
+
+/* --- contact page styles --- */
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    background-color: var(--header-background);
+    padding: 3rem;
+    border-radius: 10px;
+}
+
+.input--text {      
+    margin: 0.5rem;
+    height: 1.8rem;
+    border-radius: 5px;
+}
+
+button {
+    border: none;
+    font-size: 1rem;
+    background-color: #ccc;
+    margin: 1rem;
+    padding:0.6rem 1rem;
+    border-radius: 5px;    
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #aaa;
+}
+
+/* --- responsive --- */
+
+@media screen and (max-width: 990px) {
+    .main-container {
+        flex-direction: column;
+    }
+    .container-left, .container-right {
+        width: 100%;
+    }
+    .container-left {
+        min-height: 45%;
+    }
+    .menu {
+        margin: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .logo__image {
+        width: 1.5rem;
+    }
+    
+    .logo__tagline {        
+        font-size: 1rem;        
+    }
+
+    .latest-news {
+        font-size: 0.8rem;
+        padding: 1rem ;        
+    }
+
+    .menu__link {
+        font-size: 0.7rem;
+    }
+    
+    .menu__links-item {
+        margin: 0 0.3rem;
+    }
+}
