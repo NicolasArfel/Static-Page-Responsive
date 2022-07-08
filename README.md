@@ -1,5 +1,7 @@
 # oNews
 
+![homepage](ressources/resultat.png)
+
 ## Charte
 
 ### Visuels
